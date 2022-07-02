@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+      - name: Install linters
+        run: go install github.com/yoheimuta/protolint/cmd/protolint@latest
       - uses: reviewdog/action-setup@v1
         with:
           reviewdog_version: latest
