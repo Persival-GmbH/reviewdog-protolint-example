@@ -5,19 +5,8 @@ jobs:
     name: reviewdog
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-go@v3
+      - uses: actions/checkout@v2
+      - uses: yoheimuta/action-protolint@v1
         with:
-          # You must specify the version:
-          ## See https://github.com/actions/setup-go/issues/49
-          go-version: '1.18'
-      - name: Install linters
-        run: go install github.com/yoheimuta/protolint/cmd/protolint@latest
-      - uses: reviewdog/action-setup@v1
-        with:
-          reviewdog_version: latest
-      - name: Run reviewdog
-        env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          reviewdog -reporter=github-pr-review -filter-mode=nofilter
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review

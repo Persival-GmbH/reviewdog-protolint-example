@@ -1,5 +1,0 @@
-runner:
-  protolint:
-    cmd: protolint .
-    errorformat:
-      - "[%f:%l:%c] %m"
