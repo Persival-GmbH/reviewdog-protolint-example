@@ -11,6 +11,7 @@ lint:
       - REPEATED_FIELD_NAMES_PLURALIZED
       - FIELD_NAMES_EXCLUDE_PREPOSITIONS
       - FILE_HAS_COMMENT
+      - ORDER
 
   # Linter rules option.
   rules_option:
