@@ -10,10 +10,6 @@ lint:
     remove:
       - REPEATED_FIELD_NAMES_PLURALIZED
 
-    # Set the default to all linters. This option works the other way around as no_default does.
-    # If you want to enable this option, delete the comment out below and no_default.
-    # all_default: true
-
   # Linter rules option.
   rules_option:
     # MAX_LINE_LENGTH rule option.
