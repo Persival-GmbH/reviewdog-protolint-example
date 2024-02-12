@@ -12,6 +12,7 @@ lint:
       - FIELD_NAMES_EXCLUDE_PREPOSITIONS
       - FILE_HAS_COMMENT
       - ORDER
+      - IMPORTS_SORTED
 
   # Linter rules option.
   rules_option:
